@@ -37,7 +37,6 @@ public class AreaFigurasGeometricas {
                     mensaje("Gracias por usar nuestro programa");
                     mensaje("Esperamos que haya sido de su agrado");
                     mensaje("Deseamos que tenga un muy buen dia :D");
-                    pausa();
                     System.exit(0);
             }
             pausa();
