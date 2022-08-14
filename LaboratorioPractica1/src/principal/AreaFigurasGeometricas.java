@@ -1,6 +1,6 @@
 package principal;
 
-import principal.enumeraciones.FiguraTipo;
+import figuras.enumeraciones.FiguraTipo;
 
 import java.util.Scanner;
 

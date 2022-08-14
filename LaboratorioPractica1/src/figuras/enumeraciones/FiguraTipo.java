@@ -1,4 +1,4 @@
-package principal.enumeraciones;
+package figuras.enumeraciones;
 
 public enum FiguraTipo {
     CIRCULO,
