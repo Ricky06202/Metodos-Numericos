@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import figuras.Circulo;
 import figuras.Cuadrado;
+import figuras.FiguraGeometrica;
 import figuras.Triangulo;
 
 public class AreaFigurasGeometricas {
@@ -17,20 +18,21 @@ public class AreaFigurasGeometricas {
             limpiar();
             menu();
             FiguraTipo opcion = seleccionar_opcion();
+            FiguraGeometrica figura = null;
             switch (opcion) {
                 case CIRCULO:
-                    mensaje(new Circulo(ingresar_positivo("Ingrese el Radio del Circulo: ")));
+                    figura = new Circulo(ingresar_positivo("Ingrese el Radio del Circulo: "));
                     break;
 
                 case CUADRADO:
-                    mensaje(new Cuadrado(ingresar_positivo("Ingrese la Base del Cuadrado: "),
-                        ingresar_positivo("Ingrese la Altura del Cuadrado: ")));
+                    figura = new Cuadrado(ingresar_positivo("Ingrese la Base del Cuadrado: "),
+                        ingresar_positivo("Ingrese la Altura del Cuadrado: "));
                     break;
 
                 case TRIANGULO:
-                    mensaje(new Triangulo(ingresar_positivo("Ingrese el 1er Lado del Triangulo: "),
+                    figura = new Triangulo(ingresar_positivo("Ingrese el 1er Lado del Triangulo: "),
                         ingresar_positivo("Ingrese el 2do Lado del Triangulo: "), 
-                        ingresar_positivo("Ingrese el 3er Lado del Triangulo: ")));
+                        ingresar_positivo("Ingrese el 3er Lado del Triangulo: "));
                     break;
             
                 default:
@@ -39,6 +41,8 @@ public class AreaFigurasGeometricas {
                     mensaje("Deseamos que tenga un muy buen dia :D");
                     System.exit(0);
             }
+            if (figura != null)
+                mensaje(figura);
             pausa();
         }
     }
